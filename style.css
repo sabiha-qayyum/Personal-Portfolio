@@ -394,7 +394,7 @@ transparent
 transition:.8s;
 
 }
-skill-card:hover::before{
+.skill-card:hover::before{
 
 left:100%;
 
