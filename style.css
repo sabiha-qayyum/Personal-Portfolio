@@ -969,121 +969,7 @@ box-shadow:
 0 0 35px #00F5FF;
 
 }
-/* ===============================
-   TABLET RESPONSIVE (1024px)
-================================= */
-@media (max-width: 1024px){
-
-    .hero{
-        flex-direction: column;
-        text-align: center;
-        gap: 50px;
-        padding-top: 50px;
-    }
-
-    .hero-left{
-        width: 100%;
-    }
-
-    .hero-right{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .hero h1{
-        font-size: 55px;
-    }
-
-    .hero h2{
-        font-size: 30px;
-    }
-
-    .about-container{
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-image img{
-        width: 300px;
-        height: 300px;
-    }
-
-    .navbar{
-        width: 95%;
-    }
-
-    .nav-links{
-        gap: 15px;
-    }
-
-    .section-title h2{
-        font-size: 40px;
-    }
-}
-
-/* ===============================
-   MOBILE RESPONSIVE (768px)
-================================= */
-@media (max-width: 768px){
-
-    .navbar{
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px 0;
-    }
-
-    .nav-links{
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-    }
-
-    .btn-nav{
-        display: none;
-    }
-
-    .hero{
-        flex-direction: column-reverse;
-        text-align: center;
-        padding-top: 30px;
-    }
-
-    .hero-left{
-        width: 100%;
-    }
-
-    .hero h1{
-        font-size: 42px;
-    }
-
-    .hero h2{
-        font-size: 24px;
-    }
-
-    .hero-text{
-        font-size: 16px;
-    }
-
-    .buttons{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .buttons a{
-        width: 220px;
-        text-align: center;
-    }
-
-    .social{
-        justify-content: center;
-    }
-
-    .image-box{
-        width: 280px;
-        height: 280px;
-    }
-
+/
     .about{
         padding: 80px 5%;
     }
@@ -1125,54 +1011,76 @@ box-shadow:
     }
 }
 
-/* ===============================
-   SMALL MOBILE (480px)
-================================= */
-@media (max-width: 380px){
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    color:#00F5FF;
+    cursor:pointer;
+}
 
-    .logo{
-        font-size: 20px;
+/* Mobile Menu */
+
+@media (max-width:768px){
+
+    .navbar{
+        position:relative;
+        flex-direction:row;
+        padding:20px;
     }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .btn-nav{
+        display:none;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:80px;
+        left:0;
+        width:100%;
+        background:#050816;
+        flex-direction:column;
+        gap:20px;
+        padding:25px 0;
+        display:none;
+        z-index:1000;
+        border-top:1px solid rgba(255,255,255,.1);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    /* HERO SECTION */
+
     .hero{
         display:grid;
-    
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:40px;
     }
 
-    .hero h1{
-        font-size: 30px;
+    .hero-left{
+        width:100%;
+        order:1;
     }
 
-    .hero h2{
-        font-size: 16px;
+    .hero-right{
+        width:100%;
+        display:flex;
+        justify-content:center;
+        order:2;
     }
 
-    .hero-text{
-        font-size: 15px;
+    .buttons{
+        justify-content:center;
+        flex-wrap:wrap;
     }
 
-    .image-box{
-        width: 220px;
-        height: 220px;
-    }
-
-    .section-title h2{
-        font-size: 28px;
-    }
-
-    .project-content h3{
-        font-size: 20px;
-    }
-
-    .resume-content h3{
-        font-size: 26px;
-    }
-
-    .contact-form{
-        padding: 25px;
-    }
-
-    .info-box{
-        flex-direction: column;
-        text-align: center;
+    .social{
+        justify-content:center;
     }
     }
